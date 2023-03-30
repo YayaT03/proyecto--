@@ -1,0 +1,115 @@
+import React from 'react'
+import Forma from "../Imagenes/Forma.jpg"
+import images from "../Imagenes/images.jpg"
+import Prov from "../Imagenes/Prov.jpg"
+import pic1 from "../Imagenes/pic1.png"
+import { Link } from 'react-router-dom'
+
+
+
+const Inicio = () => {
+  return (
+
+  <div>
+    <header className="bg-ligth 'Cabin', sans-serif">
+          <div className="contenedor-header"></div>
+          <div className="container d-flex md "> </div>
+          <figure className="container d-flex align-items-center my-5">
+    <div className ="jumbotron jumbotron-fluid">
+  <div className="container-md">
+    <h1 className="display-4">Bienvenidos, Dance World Academy</h1>
+    <br></br> 
+   <p className="lead display-6"> Bailar es más que movimiento, más que cansancio,es el alivio del alma.</p> 
+    <br></br>
+    <p className="lead display-6">Bailar requiere de pasión la técnica se consigue con el tiempo.</p>
+    <img src={pic1} className="img-fluid"  alt="pic1" />
+   </div>
+      
+      
+      
+  </div>
+  </figure>
+    </header>
+
+
+      <div className="container-md flex" >
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+  <div className="col">
+    <div className="card h-100">
+       <img src={Forma}  alt="Forma" className="card-img-top" width="300" height="250"/>
+      <div className="card-body">
+        <p className="card-text">“CUANDO BAILAS PUEDES DISFRUTAR EL LUJO DE SER TÚ MISMO.”  PAULO COELHO</p>
+      </div>
+      <div className="card-footer">
+        <small className="text-muted">Última actualización hace 3 minutos</small>
+      </div>
+    </div>
+  </div>
+  <div className="col">
+    <div className="card h-100">
+    <img src={images}  alt="Forma" className="card-img-top" width="400" height="300"/>
+      <div className="card-body">
+        <p className="card-text">“LA DANZA ES EL LENGUAJE OCULTO DEL ALMA.”  MARTHA GRAHAM</p>
+      </div>
+      <div className="card-footer">
+        <small className="text-muted">Última actualización hace 3 minutos</small>
+      </div>
+      </div>
+     </div>
+
+      <div className="col">
+    <div className="card h-100">
+    <img src={Prov}  alt="Prov" className="card-img-top" width="300" height="250"/>
+      <div className="card-body">
+        <p className="card-text">“LA MÚSICA Y EL BAILE SON DOS ARTES QUE ESTÁN ÍNTIMAMENTE LIGADOS” MOLIÈRE</p>
+      </div>
+      <div className="card-footer">
+        <small className="text-muted">Última actualización hace 3 minutos</small>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+ 
+
+  <div className="container-md">
+    <br></br>
+    <p id="p1">Este es un espacio para desarrollar tus habilidades sin importar la experiencia el único requerimiento es tener ganas de aprender y una bonita energía.</p>
+  </div>
+
+
+  <footer >
+   
+
+      <div className="container-md">
+
+      <i className="fa-brands fa-facebook fa-2xl me-3" ><Link to="https://www.facebook.com"></Link></i>
+      <i className="fa-brands fa-instagram fa-2xl me-3 "><Link to="https://www.instagram.com"></Link></i>
+      <i className="fa-brands fa-tiktok fa-2xl me-3"><Link to="https://www.tiktok.com/es/"></Link></i>
+      <br></br>
+      <br></br>
+
+
+      <p1>Dance World Academy, Copyright &copy; 2023</p1>
+      <br></br>
+      <br></br>
+      <p1>Medellin-Antioquia,Colombia</p1>
+
+      </div>
+  </footer>
+
+    </div >
+
+   
+
+
+
+
+
+
+
+
+  )
+}
+
+export default Inicio
