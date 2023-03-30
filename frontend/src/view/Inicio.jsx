@@ -83,9 +83,14 @@ const Inicio = () => {
 
       <div className="container-md">
 
-      <i className="fa-brands fa-facebook fa-2xl me-3" ><Link to="https://www.facebook.com"></Link></i>
-      <i className="fa-brands fa-instagram fa-2xl me-3 "><Link to="https://www.instagram.com"></Link></i>
-      <i className="fa-brands fa-tiktok fa-2xl me-3"><Link to="https://www.tiktok.com/es/"></Link></i>
+      <i className="fa-brands fa-facebook fa-2xl me-3" ></i> 
+      <Link to="https://www.facebook.com">Facebook </Link> <br></br> <br></br>
+
+      <i className="fa-brands fa-instagram fa-2xl me-3 "> </i>  
+      <Link to="https://www.instagram.com">Instagram</Link> <br></br> <br></br>
+
+      <i className="fa-brands fa-tiktok fa-2xl me-3"></i> 
+      <Link to="https://www.tiktok.com/es/">TikTok</Link>
       <br></br>
       <br></br>
 
@@ -93,7 +98,7 @@ const Inicio = () => {
       <p1>Dance World Academy, Copyright &copy; 2023</p1>
       <br></br>
       <br></br>
-      <p1>Medellin-Antioquia,Colombia</p1>
+      <p1>Santa Rosas De Osos-Antioquia,Colombia</p1>
 
       </div>
   </footer>
