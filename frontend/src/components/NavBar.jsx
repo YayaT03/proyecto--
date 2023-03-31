@@ -28,9 +28,7 @@ const NavBar = () => {
               <li className="nav-item">
                 <Link to="Grupos" className='nav-link active'>Grupos</Link>
               </li>
-              <li className="nav-item">
-                <Link to="NuestrosGrupos" className='nav-link active'>Nuestros Grupos</Link>
-              </li>
+              
 
             </ul>
 
