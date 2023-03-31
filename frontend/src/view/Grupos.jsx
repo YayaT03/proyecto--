@@ -4,24 +4,47 @@ import { Link } from 'react-router-dom'
 const Grupos = () => {
   return (
     <div>
-     
-      <ul className="nav justify-content-end">
-      <li className="nav-item">
-                <Link to="Covers" className='nav-link active'>Covers</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="Urbano" className='nav-link active'>Urbano</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="Contemporaneo" className='nav-link active'>Contemporaneo</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="Nuestrosgrupos" className='nav-link active'>Competencia</Link>
-              </li>
- 
-</ul>
+     <h1 className="display-4">Nuestros Grupos</h1>
+     <p>
+      Una academia es nutrida gracias a nuestros bailarines,<br></br>para ello se han creado diversos grupos para que cada persona sea capaz 
+      de adaptarse a sus diversos gustos, pasiones y técnicas.<br></br>
+      Las divisiones han sido creadas apartir de los generos y tendencias de las que mas se habla.<br></br>
+     </p>
 
-<h1 className="display-4">Nuestros Grupos</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+      
+      
+                <Link to="Covers"> Covers</Link>
+             <br></br>
+                <Link to="Urbano">Urbano</Link>
+             
+              <br></br>
+                <Link to="Contemporaneo" >Contemporaneo</Link>
+              <br></br>
+                <Link to="Nuestrosgrupos">Competencia</Link>
+             
+ 
+
+
+     
 
 
 
