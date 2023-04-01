@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+.figure{
+  text-align: justify;
+}
+.p2{
+  text-align: justify;
+}
 
 .App-logo {
   height: 40vmin;

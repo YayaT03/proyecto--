@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Banner from "../Imagenes/Banner.jpg"
 
 const Grupos = () => {
   return (
@@ -8,21 +9,27 @@ const Grupos = () => {
      <h1 className="display-4">Nuestros Grupos</h1>
      </em>
      <br></br>
-     <p>
-      Una academia es nutrida gracias a nuestros bailarines,<br></br>para ello se han creado diversos grupos para que cada persona sea capaz 
-      de adaptarse a sus diversos gustos, pasiones y técnicas.<br></br>
+
+     <div className="container-md flex" >
+     <figure className="figure">
+  <img src={Banner} className="figure-img img-fluid rounded" alt="Banner"></img>
+  <figcaption className="figure"><strong>Una academia es nutrida gracias a nuestros bailarines, para ello se han creado diversos grupos para que cada persona sea capaz 
+      de adaptarse a sus diversos gustos, pasiones y técnicas.<br></br></strong></figcaption>
+     </figure>
+     <p className='p2'>
       Las divisiones han sido creadas apartir de los generos y tendencias de las que mas se habla.<br></br>
      </p>
-     <p>
 
-      Desde cada uno de los grupos se llevan a cabo procesos de aprendizaje teniendo en cuenta el nivel <br></br>
-      y la capacidad de cada uno de losintegrantes, es importante resaltar que el desarrollo de la disciplina <br></br>
+     <p className='p2'>
+
+      Desde cada uno de los grupos se llevan a cabo procesos de aprendizaje teniendo en cuenta el nivel 
+      y la capacidad de cada uno de losintegrantes, es importante resaltar que el desarrollo de la disciplina 
       y el trabajo en equipo es la base para llevar a cabo presentaciones exitosas. 
      </p>
-     <p>
-      Contamos con el grupo de competencia que ha sido elegido desde cada uno de los procesos de clase, este grupo cuenta <br></br> 
-      con el expreso concentimiento de los estudiantes y sus esfuerzos, algunos de nuestros estudiantes disfrutan de los procesos y las muestras <br></br>
-      artisticas sin la responsabilidad y presion de una competencia, en otro de los casos tenemos estudiantes a quienes les <br></br>
+     <p className='p2'>
+      Contamos con el grupo de competencia que ha sido elegido desde cada uno de los procesos de clase, este grupo cuenta 
+      con el expreso concentimiento de los estudiantes y sus esfuerzos, algunos de nuestros estudiantes disfrutan de los procesos y las muestras 
+      artisticas sin la responsabilidad y presion de una competencia, en otro de los casos tenemos estudiantes a quienes les 
       les gustan los retos y la adrernalina de competir.
       </p>
       <p className='lead'>
@@ -31,6 +38,7 @@ const Grupos = () => {
       a vivir exprencias que no creias posible. 
       </strong>
       </p>
+      </div>
 
 
       
