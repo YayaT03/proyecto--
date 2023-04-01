@@ -28,6 +28,8 @@ const NavBar = () => {
               <li className="nav-item">
                 <Link to="Grupos" className='nav-link active'>Grupos</Link>
               </li>
+             
+              
               
 
             </ul>
