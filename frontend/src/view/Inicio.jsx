@@ -38,7 +38,16 @@ const Inicio = () => {
     <div className="card h-100">
        <img src={Forma}  alt="Forma" className="card-img-top" width="300" height="250"/>
       <div className="card-body">
-        <p className="card-text">“CUANDO BAILAS PUEDES DISFRUTAR EL LUJO DE SER TÚ MISMO.”  PAULO COELHO</p>
+        <p className="card-text">
+        <figure className="text-center">
+  <blockquote className="blockquote">
+    <p>“CUANDO BAILAS PUEDES DISFRUTAR EL LUJO DE SER TÚ MISMO.”</p>
+  </blockquote>
+  <figcaption className="blockquote-footer">
+  PAULO COELHO
+  </figcaption>
+</figure>
+        </p>
       </div>
       <div className="card-footer">
         <small className="text-muted">Última actualización hace 3 minutos</small>
@@ -49,7 +58,17 @@ const Inicio = () => {
     <div className="card h-100">
     <img src={images}  alt="Forma" className="card-img-top" width="400" height="300"/>
       <div className="card-body">
-        <p className="card-text">“LA DANZA ES EL LENGUAJE OCULTO DEL ALMA.”  MARTHA GRAHAM</p>
+        <p className="card-text">
+        <figure className="text-center">
+  <blockquote className="blockquote">
+    <p> “LA DANZA ES EL LENGUAJE OCULTO DEL ALMA.”   </p>
+  </blockquote>
+  <figcaption className="blockquote-footer">
+  MARTHA GRAHAM
+  </figcaption>
+</figure>
+
+        </p>
       </div>
       <div className="card-footer">
         <small className="text-muted">Última actualización hace 3 minutos</small>
@@ -61,7 +80,17 @@ const Inicio = () => {
     <div className="card h-100">
     <img src={Prov}  alt="Prov" className="card-img-top" width="300" height="250"/>
       <div className="card-body">
-        <p className="card-text">“LA MÚSICA Y EL BAILE SON DOS ARTES QUE ESTÁN ÍNTIMAMENTE LIGADOS” MOLIÈRE</p>
+        <p className="card-text">
+        <figure className="text-center">
+      <blockquote className="blockquote">
+     <p>“LA MÚSICA Y EL BAILE SON DOS ARTES QUE ESTÁN ÍNTIMAMENTE LIGADOS”</p>
+     </blockquote>
+     <figcaption className="blockquote-footer">MOLIÈRE
+ 
+      </figcaption>
+   </figure>
+        </p>
+
       </div>
       <div className="card-footer">
         <small className="text-muted">Última actualización hace 3 minutos</small>
@@ -74,9 +103,13 @@ const Inicio = () => {
 
   <div className="container-md">
     <br></br>
-    <p id="p1">Este es un espacio para desarrollar tus habilidades sin importar la experiencia el único requerimiento es tener ganas de aprender y una bonita energía.</p>
+    <p className='lead'>
+    <strong>
+      Este es un espacio para desarrollar tus habilidades sin importar la experiencia el único requerimiento es tener ganas de aprender y una bonita energía. 
+</strong>
+</p>
+  
   </div>
-
 
   <footer >
    
