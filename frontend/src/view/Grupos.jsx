@@ -1,68 +1,68 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Banner from "../Imagenes/Banner.jpg"
+import dance from "../Imagenes/dance.jpg"
+import More from "../Imagenes/More.jpg"
+import Baila from "../Imagenes/Baila.jpg"
+import Bailar from "../Imagenes/Bailar.jpg"
+
 
 const Grupos = () => {
   return (
     <div>
+      <header className="bg-ligth 'Cabin', sans-serif">
       <em>
      <h1 className="display-4">Nuestros Grupos</h1>
      </em>
-     <br></br>
+     <br></br>    
+     <div className="container-md -flex" >
+      <div class="clearfix">
+      <img src={Banner} className="col-md-6 float-md-end mb-3 ms-md-3 img-fluid" alt="Banner"></img>
 
-     <div className="container-md flex" >
-     <figure className="figure">
-  <img src={Banner} className="figure-img img-fluid rounded" alt="Banner"></img>
-  <figcaption className="figure"><strong>Una academia es nutrida gracias a nuestros bailarines, para ello se han creado diversos grupos para que cada persona sea capaz 
-      de adaptarse a sus diversos gustos, pasiones y técnicas.<br></br></strong></figcaption>
-     </figure>
-     <p className='p2'>
+      <strong>Una academia es nutrida gracias a nuestros bailarines, para ello se han creado diversos grupos para que cada persona sea capaz 
+      de adaptarse a sus diversos gustos, pasiones y técnicas.<br></br></strong>
+      <p className='p2'>
       Las divisiones han sido creadas apartir de los generos y tendencias de las que mas se habla.<br></br>
      </p>
-
      <p className='p2'>
 
-      Desde cada uno de los grupos se llevan a cabo procesos de aprendizaje teniendo en cuenta el nivel 
-      y la capacidad de cada uno de losintegrantes, es importante resaltar que el desarrollo de la disciplina 
-      y el trabajo en equipo es la base para llevar a cabo presentaciones exitosas. 
-     </p>
-     <p className='p2'>
-      Contamos con el grupo de competencia que ha sido elegido desde cada uno de los procesos de clase, este grupo cuenta 
-      con el expreso concentimiento de los estudiantes y sus esfuerzos, algunos de nuestros estudiantes disfrutan de los procesos y las muestras 
-      artisticas sin la responsabilidad y presion de una competencia, en otro de los casos tenemos estudiantes a quienes les 
-      les gustan los retos y la adrernalina de competir.
-      </p>
-      <p className='lead'>
-      <strong>
-        Sin mas bienvenidos a conocer cada uno de los generos y procesos de nuestra academia para que la intriga te lleve <br></br>
-      a vivir exprencias que no creias posible. 
-      </strong>
-      </p>
-      </div>
+Desde cada uno de los grupos se llevan a cabo procesos de aprendizaje teniendo en cuenta el nivel 
+y la capacidad de cada uno de losintegrantes, es importante resaltar que el desarrollo de la disciplina 
+y el trabajo en equipo es la base para llevar a cabo presentaciones exitosas. 
+</p>
+<p className='p2'>
+Contamos con el grupo de competencia que ha sido elegido desde cada uno de los procesos de clase, este grupo cuenta 
+con el expreso concentimiento de los estudiantes y sus esfuerzos, algunos de nuestros estudiantes disfrutan de los procesos y las muestras 
+artisticas sin la responsabilidad y presion de una competencia, en otro de los casos tenemos estudiantes a quienes les 
+les gustan los retos y la adrernalina de competir.
+</p>
+<p className='lead'>
+<strong>
+  Sin mas bienvenidos a conocer cada uno de los generos y procesos de nuestra academia para que la intriga te lleve <br></br>
+a vivir exprencias que no creias posible. 
+</strong>
+</p>
 
+</div>
+</div>
+</header>
 
-      
-                <Link to="Covers"> Covers</Link>
-             <br></br>
-                <Link to="Urbano">Urbano</Link>
+<div className="container-md -flex" >
+<img src={dance} className="float-start img-fluid" alt="dance"></img>
+<Link to="Covers"> Covers</Link>
+<img src={More} className=" float img-fluid" alt="More"></img>
+<Link to="Urbano">Urbano</Link>
+
+<img src={Baila} className="float img-fluid" alt="Baila"></img>
+<Link to="Contemporaneo" >Contemporaneo</Link>
+<img src={Bailar} className="float img-fluid" alt="Bailar"></img>             
+<Link to="Nuestrosgrupos">Competencia</Link>
              
-              <br></br>
-                <Link to="Contemporaneo" >Contemporaneo</Link>
-              <br></br>
-                <Link to="Nuestrosgrupos">Competencia</Link>
-             
+</div>
 
 
 
-
-
-
-
-
-
-
-
-                <footer >
+<footer >
    
 
    <div className="container-md - aligin-items-center">
@@ -84,26 +84,11 @@ const Grupos = () => {
    
    </div>
 </footer>
- 
 
 
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
         
-        
-        </div>
+      
   )
 }
 

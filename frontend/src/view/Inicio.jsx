@@ -11,6 +11,7 @@ const Inicio = () => {
   return (
 
   <div>
+
     <header className="bg-ligth 'Cabin', sans-serif">
           <div className="contenedor-header"></div>
           <div className="container d-flex md "> </div>
