@@ -47,6 +47,8 @@ text-align: center;
 font-style: oblique;
 }
 
+
+
 footer{
   padding:35px;
   margin-top:35px;
@@ -59,4 +61,17 @@ footer{
 
 .navbarText{
   color: #1b141f;
+}
+.list-group-item{
+  background-color: rgb(191, 166, 239);
+}
+.accordion-button{
+  background-color: rgb(232, 158, 254);
+}
+.accordion-collapse{
+  background-color: rgb(177, 166, 172);
+}
+.container-md-2{
+  background-color: rgb(179, 172, 176);
+  
 }

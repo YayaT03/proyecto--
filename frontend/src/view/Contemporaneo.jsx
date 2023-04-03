@@ -3,10 +3,8 @@ import React from 'react'
 const Contemporaneo = () => {
   return (
     <div>
-      
-      <h1>Contemporaneo</h1>
 
-
+        <h1>CONTEMPORANEO</h1>
 
     </div>
   )

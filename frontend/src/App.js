@@ -4,17 +4,13 @@ import './App.css';
 import NavBar from "./components/NavBar"
 import Inicio from "./view/Inicio"
 import Blog from "./view/Blog"
-import Grupos from "./view/Grupos" 
+import Grupos from './view/Grupos';
 
 
-import NuestrosGrupos from './view/NuestrosGrupos';
+import { Registro } from './view/Registro';
 import Covers from "./view/Covers";
 import Contemporaneo from "./view/Contemporaneo";
 import Urbano from "./view/Urbano";
-
-
-
-
 
 function App() {
   return (
@@ -23,15 +19,14 @@ function App() {
 
       <Routes>
 
-        <Route path="inicio" element={<Inicio />} />
-        <Route path="grupos" element={<Grupos />} />
+        <Route path="/" element={<Inicio />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="/grupos/*" element={<Grupos />} />
+        <Route path="/grupos/contemporaneo" element={<Contemporaneo />} />
+        <Route path="/grupos/covers" element={<Covers />} />
+        <Route path="/grupos/urbano" element={<Urbano />} />
+        <Route path="/grupos/registro" element={<Registro />} />
         
-        <Route path="nuestrosgrupos" element={<NuestrosGrupos />} />
-        <Route path="covers" element={<Covers />} />
-        <Route path="urbano" element={<Urbano />} />
-        <Route path="contemporaneo" element={<Contemporaneo />} />
-
 
       </Routes>
     </div>

@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logoW from "../Imagenes/logoW.png"
 
-
 const NavBar = () => {
 
   return (
+    <div>
     <nav className="navbar navbar-light flex ">
       <div className="container-fluid">
-        <Link className="navbar-brand" href="Inicio">Dance World Academy</Link>
+        <Link to="/" className="navbar-brand">Dance World Academy</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -20,17 +20,21 @@ const NavBar = () => {
           <div className="offcanvas-body bg-">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <Link to="Inicio" className='nav-link active'>Inicio</Link>
+                <Link to="/" className='nav-link active'>Inicio</Link>
               </li>
               <li className="nav-item">
-                <Link to="Blog" className='nav-link active'>Blog</Link>
+                <Link to="blog" className='nav-link active'>Blog</Link>
               </li>
               <li className="nav-item">
-                <Link to="Grupos" className='nav-link active'>Grupos</Link>
+                <Link to="grupos" className='nav-link active'>Grupos</Link>
               </li>
-             
+
+            {/*editar
+              <li className="nav-item">
+                <Link to="/grupos/contemporaneo" className='nav-link active'>Contemporaneo</Link>
+              </li>
               
-              
+  */}
 
             </ul>
 
@@ -39,7 +43,10 @@ const NavBar = () => {
         </div>
       </div>
     </nav>
+    
+    
 
+    </div>
   )
 }
 

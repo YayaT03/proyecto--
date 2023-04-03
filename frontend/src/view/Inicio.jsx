@@ -19,11 +19,10 @@ const Inicio = () => {
     <div className ="jumbotron jumbotron-fluid">
   <div className="container-md">
     <h1 className="display-4">Bienvenidos, Dance World Academy</h1>
-    <br></br> 
-   <p className="lead display-6"> Bailar es más que movimiento, más que cansancio,es el alivio del alma.</p> 
-    <br></br>
-    <p className="lead display-6">Bailar requiere de pasión la técnica se consigue con el tiempo.</p>
-    <img src={pic1} className="img-fluid"  alt="pic1" />
+    <img src={pic1} className="img-fluid"  alt="pic1" /><div class="carousel-caption d-none d-md-block  top-50 ">
+              <p className="lead display-6">Bailar es más que movimiento, más que cansancio,es el alivio del alma.</p>
+              <p className="lead display-6">Bailar requiere de pasión la técnica se consigue con el tiempo.</p>
+            </div>
    </div>
       
       
