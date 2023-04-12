@@ -5,6 +5,8 @@ import photo4 from '../Imagenes/photo4.jpg'
 import photo3 from '../Imagenes/photo3.jpg'
 import photo2 from '../Imagenes/photo2.jpg'
 import photo1 from '../Imagenes/photo1.jpg'
+import nosotras from '../Imagenes/nosotras.jpg'
+
 
 
 
@@ -59,9 +61,15 @@ El principal objetivo de la danza, en general, es el de servir como un medio par
     </div>
   </div>
 </div>
-
+<br></br>
+<br></br>
 
 <div classname="container-md">
+<div class="row">
+    <div className="col-6">
+    
+<h2 className="display-5 "> Nuestro Album </h2>
+
   <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -69,18 +77,18 @@ El principal objetivo de la danza, en general, es el de servir como un medio par
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div className="carousel-inner md ">
+  <div className="carousel-inner  ">
     <div className="carousel-item active">
-      <img src={photo4} className="d-block w-50" alt="photo4"></img>
+      <img src={photo4} className=" w-50" alt="photo4"></img>
     </div>
     <div className="carousel-item">
-      <img src={photo3} className="d-block w-50" alt="photo3"></img>
+      <img src={photo3} className=" w-50" alt="photo3"></img>
     </div>
     <div className="carousel-item">
-      <img src={photo2} className="d-block w-50 " alt="photo2"></img>
+      <img src={photo2} className=" w-50 " alt="photo2"></img>
     </div>
     <div className="carousel-item">
-      <img src={photo1} className="d-block w-50 " alt="photo1"></img>
+      <img src={photo1} className="w-50 " alt="photo1"></img>
     </div>
 
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -93,17 +101,17 @@ El principal objetivo de la danza, en general, es el de servir como un medio par
   </button>
 </div>
 </div>
+</div>
+
+<div className="col-4">
+<h2 className="display-5 "> Conocenos </h2>
+<img src={nosotras} className="col-md-6 float-md-end mb-3 ms-md-3 img-fluid" alt="nosotras"></img>
+
+</div>
+</div>
 
 
-
-
-
-
-
-
-
-
-           
+    
     
 
 <footer >
