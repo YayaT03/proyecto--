@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import histodance from '../Imagenes/histodance.jpg'
-import chica from '../Imagenes/chica.png'
+import photo4 from '../Imagenes/photo4.jpg'
+import photo3 from '../Imagenes/photo3.jpg'
+import photo2 from '../Imagenes/photo2.jpg'
+import photo1 from '../Imagenes/photo1.jpg'
+
+
 
 const Blog = () => {
   return (
@@ -56,12 +61,49 @@ El principal objetivo de la danza, en general, es el de servir como un medio par
 </div>
 
 
-            <div className="container-md-2">
-            <div class="clearfix">
-            <img src={chica} className="col-md-6 float-md-end mb-3 ms-md-3 " alt="chica"></img>
-             </div>
-            
-      
+<div classname="container-md">
+  <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+  <div className="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div className="carousel-inner md ">
+    <div className="carousel-item active">
+      <img src={photo4} className="d-block w-50" alt="photo4"></img>
+    </div>
+    <div className="carousel-item">
+      <img src={photo3} className="d-block w-50" alt="photo3"></img>
+    </div>
+    <div className="carousel-item">
+      <img src={photo2} className="d-block w-50 " alt="photo2"></img>
+    </div>
+    <div className="carousel-item">
+      <img src={photo1} className="d-block w-50 " alt="photo1"></img>
+    </div>
+
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Anterior</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Siguiente</span>
+  </button>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+           
     
 
 <footer >
@@ -86,6 +128,7 @@ El principal objetivo de la danza, en general, es el de servir como un medio par
    </footer>
    </div>
    </div>
+   
 
 
 
