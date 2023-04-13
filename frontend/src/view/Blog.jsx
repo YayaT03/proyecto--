@@ -8,8 +8,6 @@ import photo1 from '../Imagenes/photo1.jpg'
 import nosotras from '../Imagenes/nosotras.jpg'
 
 
-
-
 const Blog = () => {
   return (
     <div>
