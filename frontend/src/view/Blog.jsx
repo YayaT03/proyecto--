@@ -106,7 +106,9 @@ El principal objetivo de la danza, en general, es el de servir como un medio par
 <div className="col-4">
 <h2 className="display-5 "> Conocenos </h2>
 <img src={nosotras} className="col-md-6 float-md-end mb-3 ms-md-3 img-fluid" alt="nosotras"></img>
-
+<p> Somos tres chicas que han sido motivadas a emprender la tarea de craer una pagina que muestre el amor que una de sus <br></br>                    </p>
+integrantes tiene hacia este hermoso arte de expresar emociones y momentos con el cuerpo llamada danza.<br></br>
+Nosotras somos: Deisy, Karen y Yaya.  &#128156;  &#128522;
 </div>
 </div>
 
