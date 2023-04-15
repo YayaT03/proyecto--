@@ -46,53 +46,84 @@ const Covers = () => {
 
      <div className="container-md -flex" >
       <h2>Galery &#128156; </h2>  
-        <ul className="list-group list-group-horizontal">
+      
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+    <img src={army} className="float-start img-fluid" alt="army"></img>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+    <img src={txt} className=" float img-fluid" alt="txt"></img>
+    </div>
+    <div class="carousel-item">
+    <img src={skz} className="float-start img-fluid" alt="skz"></img>
+    </div>
+    <div class="carousel-item">
+    <img src={enhypen} className="float-start img-fluid" alt="enhypen"></img>
+    </div>
+    <div class="carousel-item">
+    <img src={gdle} className="float-start img-fluid" alt="gdle"></img>
+    </div>
+    <div class="carousel-item">
+    <img src={svt} className="float-start img-fluid" alt="svt"></img>
+    </div>
+    <div class="carousel-item">
+    <img src={bkp} className="float-start img-fluid" alt="bkp"></img>
+    </div>
 
-          <li className="list-group-item">
-            <img src={army} className="float-start img-fluid" alt="army"></img>
-              <div class="carousel-caption d-none d-md-block  text-black">
-              </div>
-           
-          </li>
 
-          <li className="list-group-item">
-            <img src={txt} className=" float img-fluid" alt="txt"></img>
-            <div class="carousel-caption d-none d-md-block text-black">
-              </div>
-          </li>
-        </ul>
-        <li className="list-group-item">
-            <img src={skz} className="float-start img-fluid" alt="skz"></img>
-              <div class="carousel-caption d-none d-md-block  text-black">
-              </div>
-           
-          </li>
-          <li className="list-group-item">
-            <img src={enhypen} className="float-start img-fluid" alt="enhypen"></img>
-              <div class="carousel-caption d-none d-md-block  text-black">
-              </div>
-           
-          </li>
-          <li className="list-group-item">
-            <img src={gdle} className="float-start img-fluid" alt="gdle"></img>
-              <div class="carousel-caption d-none d-md-block  text-black">
-              </div>
-           
-          </li>
-          <li className="list-group-item">
-            <img src={svt} className="float-start img-fluid" alt="svt"></img>
-              <div class="carousel-caption d-none d-md-block  text-black">
-              </div>
-           
-          </li>
-          <li className="list-group-item">
-            <img src={bkp} className="float-start img-fluid" alt="bkp"></img>
-              <div class="carousel-caption d-none d-md-block  text-black">
-              </div>
-           
-          </li>
 
-        </div>
+
+
+
+
+
+
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+          
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <footer >
         <div className="container-md - aligin-items-center">
@@ -122,6 +153,7 @@ const Covers = () => {
 
 
 
+        </div>
         </div>
         
 
