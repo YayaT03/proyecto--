@@ -92,38 +92,7 @@ const Covers = () => {
 </div>
 
           
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
         <footer >
         <div className="container-md - aligin-items-center">

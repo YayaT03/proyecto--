@@ -51,7 +51,7 @@ const Grupos = () => {
         <ul className="list-group list-group-horizontal">
 
           <li className="list-group-item">
-            <Link to="covers"><img src={dance} className="float-start img-fluid" alt="dance">
+            <Link to="covers"><img src={More} className="float-start img-fluid" alt="More">
 
             </img>
               <div class="carousel-caption d-none d-md-block  text-black">
@@ -61,7 +61,7 @@ const Grupos = () => {
           </li>
 
           <li className="list-group-item">
-            <Link to="urbano"><img src={More} className=" float img-fluid" alt="More"></img><div class="carousel-caption d-none d-md-block text-black">
+            <Link to="urbano"><img src={dance} className=" float img-fluid" alt="dance"></img><div class="carousel-caption d-none d-md-block text-black">
               <h5>Urbano</h5>
               
             </div></Link>
