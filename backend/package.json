@@ -7,14 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Src /Index.js",
     "dev": "nodemon Src/Index.js"
-
   },
-  
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "mongoose": "^7.0.4",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.22"
   }
