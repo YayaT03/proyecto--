@@ -73,13 +73,6 @@ const Covers = () => {
 
 
 
-
-
-
-
-
-
-
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -114,9 +107,6 @@ const Covers = () => {
 
         </div>
       </footer>
-
-
-
 
 
 
