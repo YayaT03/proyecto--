@@ -38,7 +38,7 @@ testCtrl.update=(req,res) =>{
         const {id}=req.params
         res.json({
             ok:true,
-         message:` el dato con el id ${id} fue eliminado`,
+         message:` el dato con el id ${id} fue actualizado`,
 
         })
     } catch (error) {
