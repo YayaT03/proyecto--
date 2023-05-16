@@ -18,7 +18,10 @@ app.use("/api/test",require('./routes/test.route'))
 app.use("/api/estudiantes",require('./routes/estudiantes.route'))
 app.use("/api/acudientes", require('./routes/acudientes.route'))
 app.use("/api/profesores",require('./routes/profesores.route'))
-app.use("/api/grupos",require('./routes/grupo.route'))
+app.use("/api/grupo",require(`./routes/grupo.route`))
+app.use("/api/subnivel", require(`./routes/subnivel.route`))
+app.use("/api/matricula", require(`./routes/matricula.route`))
+app.use("/api/mensualidad", require(`./routes/mensualidad.route`))
 
 app.listen(app.get("Port"),() => {
     console.log("servidor corriendo por el puerto",app.get("Port"));

@@ -1,21 +1,21 @@
 const { Schema, model } = require('mongoose')
 
 
-const userSchema = new Schema({
-    name:{
+const matriculaSchema = new Schema({
+    estudiante:{
         type: String,
         required: true
     },
-    lastname:{
+    acudiente:{
         type: String,
         require: true,
     },
-    email:{
+    grupo:{
         type: String,
         require: true,
         unique: true,
     },
-    salary:{
+    subnivel:{
         type: Number,
         default: 0,
     },
@@ -26,4 +26,4 @@ const userSchema = new Schema({
 
     
 
-module.exports = model('users', userSchema);
+module.exports = model('matricula', matriculaSchema);
