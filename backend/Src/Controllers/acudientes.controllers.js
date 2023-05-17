@@ -44,8 +44,8 @@ acudientesCrtl.listid = async (req, res) => {
 
 acudientesCrtl.add = async (req, res) => {
     try {
-        const { documentid,name, lastname, parentezco, phonenumber, estudiante } = req.body
-        if (!name || name.trim() === "") {
+        const { documentid,name1,name2, lastname1,lastname2, parentezco,direction, phonenumber, estudiante } = req.body
+        if (!documentid || documentid.trim() === "") {
             return res.statues(400).json({
                 ok: false,
                 message: "el campo name es requerido y no puede estar vacio"
@@ -61,11 +61,14 @@ acudientesCrtl.add = async (req, res) => {
         }
         const newAcudiente = new acudientesModel({
             documentid,
-            name,
-            lastname,
+            name1,
+            name2,
+            lastname1,
+            lastname2,
             parentezco,
             phonenumber,
             estudiante,
+            direction,
 
         });
 
@@ -100,18 +103,24 @@ acudientesCrtl.update = async (req, res) => {
         }
 
         const documentid = req.body.documentid || acudientes.documentid;
-        const name = req.body.name || acudientes.name;
-        const lastname = req.body.lastname || acudientes.lastname;
+        const name1 = req.body.name1 || acudientes.name1;
+        const lastname1 = req.body.lastname1 || acudientes.lastname1;
+        const name2 = req.body.name2 || acudientes.name2;
+        const lastname2 = req.body.lastname2 || acudientes.lastname2;
         const parentezco = req.body.parentezco || acudientes.parentezco;
         const phonenumber = req.body.phonenumber || acudientes.phonenumber;
         const estudiante = req.body.estudiante || acudientes.estudiante;
+        const direction = req.body.direction || acudientes.direction;
         const acudientesUpdate = {
             documentid,
-            name,
-            lastname,
+            name1,
+            name2,
+            lastname1,
+            lastname2,
             parentezco,
             phonenumber,
             estudiante,
+            direction,
 
         };
         await acudientes.updateOne(acudientesUpdate);

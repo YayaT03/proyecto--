@@ -1,9 +1,10 @@
 const { Schema, model } = require('mongoose')
 
 
-const userSchema = new Schema({
+const registrocompetenciaSchema = new Schema({
     documentid:{
-        type: String,
+        type: Number,
+        default: 0,
         required: true
     },
     name1:{
@@ -20,9 +21,9 @@ const userSchema = new Schema({
     },
     lastname2:{
         type: String,
-        require: true,
+        required: true
     },
-    parentezco:{
+    email:{
         type: String,
         require: true,
         unique: true,
@@ -31,14 +32,15 @@ const userSchema = new Schema({
         type: Number,
         default: 0,
     },
-    direction:{
+    grupoactual:{
         type: String,
         required: true
     },
-    estudiante:{
+    subnivel:{
         type: String,
         required: true
     },
+   
 },
     {
         timestamps: true
@@ -46,4 +48,4 @@ const userSchema = new Schema({
 
     
 
-module.exports = model('acudientes', userSchema);
+module.exports = model('registrocompetencia', registrocompetenciaSchema);

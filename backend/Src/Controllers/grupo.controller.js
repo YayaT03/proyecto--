@@ -39,7 +39,7 @@ grupoCtrl.listid = async (req, res) => {
 
 grupoCtrl.add = async (req, res) => {
     try {
-        const { genero } = req.body
+        const { genero,profesorname1,profesorname2,profesorlastname1,profesorlastname2,cantidadestudiantes } = req.body
         if (!genero || genero.trim() === "") {
             return res.status(400).json({
                 ok: false,
@@ -56,7 +56,12 @@ grupoCtrl.add = async (req, res) => {
         }*/
 
         const newgrupo = new grupoModel({
-            genero
+            genero,
+            profesorname1,
+            profesorname2,
+            profesorlastname1,
+            profesorlastname2,
+            cantidadestudiantes,
         });
 
         await newgrupo.save()
@@ -85,10 +90,19 @@ grupoCtrl.update = async (req, res) => {
 
 
         const genero = req.body.genero || grupo.genero;
-        
+        const profesorname1 = req.body.profesorname1 || grupo.profesorname1;
+        const profesorname2 = req.body.profesorname2 || grupo.profesorname2;
+        const profesorlastname1 = req.body.profesorlastname1 || grupo.profesorlastname1;
+        const profesorlastname2 = req.body.profesorlastname2 || grupo.profesorlastname2;
+        const cantidadestudiantes = req.body.cantidadestudiantes || grupo.cantidadestudiantes;
 
         const grupoUpdate = {
             genero,
+            profesorname1,
+            profesorname2,
+            profesorlastname1,
+            profesorlastname2,
+            cantidadestudiantes,
         };
 
         await grupo.updateOne(grupoUpdate);

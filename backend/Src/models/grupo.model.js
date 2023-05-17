@@ -6,23 +6,26 @@ const grupoSchema = new Schema({
         type: String,
         required: true
     },
-    /*lastname:{
+    profesorname1:{
         type: String,
-        require: true,
+        required: true
     },
-    email:{
+    profesorname2:{
         type: String,
-        require: true,
-        unique: true,
+        required: true
     },
-    salary:{
+    profesorlastname1:{
+        type: String,
+        required: true
+    },
+    profesorlastname2:{
+        type: String,
+        required: true
+    },
+    cantidadestudiantes:{
         type: Number,
-        default: 0,
+        required: true
     },
-    */
-},
-
-    {
         timestamps: true
     });
 

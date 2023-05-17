@@ -2,15 +2,23 @@ const { Schema, model } = require('mongoose')
 
 
 const userSchema = new Schema({
-    Documentid:{
+    documentid:{
         type: String,
         required: true
     },
-    name:{
+    name1:{
         type: String,
         required: true
     },
-    lastname:{
+    name2:{
+        type: String,
+        required: true
+    },
+    lastname1:{
+        type: String,
+        required: true
+    },
+    lastname2:{
         type: String,
         require: true,
     },
@@ -24,6 +32,14 @@ const userSchema = new Schema({
         default: 0,
     },
     direction:{
+        type: String,
+        required: true
+    },
+    edad:{
+        type: String,
+        required: true
+    },
+    fechadenacimiento:{
         type: String,
         required: true
     },

@@ -45,8 +45,8 @@ profesoresCrtl.listid = async (req, res) => {
 
 profesoresCrtl.add = async (req, res) => {
     try {
-        const { Documentid,name, lastname, email, phonenumber, direction } = req.body
-        if (!name || name.trim() === "") {
+        const { documentid,name1,name2, lastname1,lastname2, email, phonenumber, direction,fechadenacimiento,edad } = req.body
+        if (!documentid || documentid.trim() === "") {
             return res.statues(400).json({
                 ok: false,
                 message: "el campo name es requerido y no puede estar vacio"
@@ -61,12 +61,16 @@ profesoresCrtl.add = async (req, res) => {
             });
         }
         const newProfesor = new profesoresModel({
-            Documentid,
-            name,
-            lastname,
+            documentid,
+            name1,
+            name2,
+            lastname1,
+            lastname2,
             email,
             phonenumber,
-            direction
+            direction,
+            fechadenacimiento,
+            edad,
 
         });
 
@@ -100,19 +104,27 @@ profesoresCrtl.update = async (req, res) => {
             });
         }
 
-        const Documentid = req.body.Documentid || profesores.Documentid;
-        const name = req.body.name || profesores.name;
-        const lastname = req.body.lastname || profesores.lastname;
+        const documentid = req.body.documentid || profesores.documentid;
+        const name1 = req.body.name1 || profesores.name1;
+        const name2 = req.body.name2 || profesores.name2;
+        const lastname1 = req.body.lastname1 || profesores.lastname1;
+        const lastname2 = req.body.lastname2 || profesores.lastname2;
         const email = req.body.email || profesores.email;
-        const phonenumber = req.body.salary || profesores.salary;
+        const phonenumber = req.body.phonenumber || profesores.phonenumber;
         const direction = req.body.direction || profesores.direction;
+        const edad = req.body.edad || profesores.edad;
+        const fechadenacimiento = req.body.fechadenacimiento || profesores.fechadenacimiento;
         const profesoresUpdate = {
-            Documentid,
-            name,
-            lastname,
+            documentid,
+            name1,
+            name2,
+            lastname1,
+            lastname2,
             email,
             phonenumber,
-            direction
+            direction,
+            edad,
+            fechadenacimiento,
 
         };
         await profesores.updateOne(profesoresUpdate);

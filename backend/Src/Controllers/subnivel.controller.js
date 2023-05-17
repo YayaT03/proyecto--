@@ -39,24 +39,18 @@ subnivelCtrl.listid = async (req, res) => {
 
 subnivelCtrl.add = async (req, res) => {
     try {
-        const { tipo,  } = req.body
-        if (!tipo || tipo.trim() === "") {
+        const { genero, nivel } = req.body
+        if (!genero || genero.trim() === "") {
             return res.status(400).json({
                 ok: false,
-                message: "El campo tipo es requerido y no puede estar vacio"
+                message: "El campo genero es requerido y no puede estar vacio"
             })
         }
 
-        /*const verificar = await subnivelModel.findOne({ email })
-        if (verificar) {
-            return res.json({
-                ok: false,
-                message: "El correo ya esta reigistrado con otro usuario"
-            });
-        }*/
-
+    
         const newsubnivel = new subnivelModel({
-            tipo
+            nivel,
+            genero,
         });
 
         await newsubnivel.save()
@@ -84,11 +78,12 @@ subnivelCtrl.update = async (req, res) => {
         }
 
 
-        const tipo = req.body.tipo || subnivel.tipo;
-        
+        const nivel  = req.body.nivel || subnivel.nivel;
+        const genero = req.body.genero || subnivel.genero;
 
         const subnivelUpdate = {
-           tipo
+           nivel,
+           genero,
         };
 
         await subnivel.updateOne(subnivelUpdate);
