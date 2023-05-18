@@ -1,5 +1,5 @@
-const { Schema, model } = require('mongoose')
-//const mongoosePaginate = require('mongoose-paginate-v2');
+import mongoose from 'mongoose';
+const { Schema, model } = require( mongoose );
 
 const subnivelSchema = new Schema({
     nivel:{

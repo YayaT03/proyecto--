@@ -1,5 +1,5 @@
-const { Schema, model } = require('mongoose')
-
+import mongoose from 'mongoose';
+const { Schema, model } = require( mongoose );
 
 const matriculaSchema = new Schema({
 

@@ -1,4 +1,5 @@
-const { Schema, model } = require('mongoose')
+import mongoose from 'mongoose';
+const { Schema, model } = require( mongoose );
 
 
 const mensualidadSchema = new Schema({
