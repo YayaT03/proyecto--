@@ -1,4 +1,4 @@
-const acudientesCrtl = {}
+const acudientesCrtl = {};
 const acudientesModel = require('../models/acudientes.model')
 
 
@@ -44,7 +44,7 @@ acudientesCrtl.listid = async (req, res) => {
 
 acudientesCrtl.add = async (req, res) => {
     try {
-        const { documentid,name1,name2, lastname1,lastname2, parentezco,direction, phonenumber, estudiante } = req.body
+        const { documentid, name1, name2, lastname1, lastname2, parentezco, direction, phonenumber, estudiante } = req.body
         if (!documentid || documentid.trim() === "") {
             return res.statues(400).json({
                 ok: false,
