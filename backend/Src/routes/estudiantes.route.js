@@ -1,5 +1,4 @@
-const { Router } = require('express')
-
+const { Router } = require('express');
 const estudiantesCtrl = require('../controllers/estudiantes.controllers');
 
 const route = Router();
@@ -14,4 +13,4 @@ route.delete('/delete/:id', estudiantesCtrl.delete);
 
 
 
-module.exports = route 
+module.exports = route;

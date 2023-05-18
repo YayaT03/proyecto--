@@ -1,5 +1,5 @@
-const estudiantesCrtl = {}
-const estudiantesModel = require('../models/estudiantes.model')
+const estudiantesCrtl = {};
+const estudiantesModel = require(`../models/estudiantes.model`)
 
 
 estudiantesCrtl.list = async (req, res) => {
