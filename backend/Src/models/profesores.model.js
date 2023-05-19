@@ -1,6 +1,6 @@
 const { Schema, model } = require( `mongoose` );
 
-const userSchema = new Schema({
+const profesoresSchema = new Schema({
     documentid:{
         type: String,
         required: true
@@ -48,4 +48,4 @@ const userSchema = new Schema({
 
     
 
-module.exports = model('profesores', userSchema);
+module.exports = model('profesores', profesoresSchema);
