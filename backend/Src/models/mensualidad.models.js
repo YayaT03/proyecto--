@@ -52,9 +52,8 @@ const mensualidadSchema = new Schema({
     valortotal:{
         type: Number,
         default: 0,
-    }
-},
-    {
+    },
+
         timestamps: true
     });
 

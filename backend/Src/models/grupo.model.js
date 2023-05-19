@@ -25,7 +25,7 @@ const grupoSchema = new Schema({
         type: Number,
         required: true
     },
-        timestamps: true
+        timestamps: true 
     });
 
     //userSchema.plugin(mongoosePaginate)

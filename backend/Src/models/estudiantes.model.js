@@ -1,4 +1,4 @@
-const { Schema, model } = require( `mongoose` )
+const { Schema, model } = require( `mongoose` );
 
 
 const estudiantesSchema = new Schema({
@@ -44,8 +44,7 @@ const estudiantesSchema = new Schema({
         type: String,
         required: true
     },
-},
-    {
+
         timestamps: true
     });
 

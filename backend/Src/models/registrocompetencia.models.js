@@ -41,8 +41,7 @@ const registrocompetenciaSchema = new Schema({
         required: true
     },
    
-},
-    {
+
         timestamps: true
     });
 
