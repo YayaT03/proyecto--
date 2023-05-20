@@ -34,11 +34,11 @@ const matriculaSchema = new Schema({
     },
     telefono: {
         type: String,
-        required: true
+       
     },
     email: {
         type: String,
-        required: true
+        
     },
     acudientenombre1: {
         type: String,

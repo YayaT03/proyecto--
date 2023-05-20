@@ -40,14 +40,14 @@ const matriculaModel = require('../models/matricula.models')
     try {
         const { matriculaid,fecha,estudiantenombre1,estudiantenombre2,estudianteapellido1, estudianteapellido2,documentoestudiante,telefono,email,
         acudientenombre1,acudientenombre2,acudienteapellido1,acudienteapellido2,documentoacudiente, profesornombre1,profesorapellido1, grupo, subnivel } = req.body
-        if (!estudiante || estudiante.trim() === "") {
+        if (!matriculaid || matriculaid.trim() === "") {
             return res.status(400).json({
                 ok: false,
                 message: "El campo matricula Id es requerido y no puede estar vacio"
             })
         }
 
-        const verificar = await matriculaModel.findOne({ estudiante })
+        const verificar = await matriculaModel.findOne({ matriculaid })
         if (verificar) {
             return res.json({
                 ok: false,
