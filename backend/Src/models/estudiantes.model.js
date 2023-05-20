@@ -1,5 +1,4 @@
-const { Schema, model } = require(`mongoose`);
-
+const { Schema, model } = require("mongoose");
 
 const estudiantesSchema = new Schema({
     documentid:{
@@ -34,20 +33,19 @@ const estudiantesSchema = new Schema({
     },
     direction:{
         type: String,
-        required: true
+        
     },
     edad:{
         type: String,
-        required: true
+        
     },
     fechadenacimiento:{
         type: String,
-        required: true
+        
     },
+},
+      {timestamps: true}  
 
-        timestamps: true
-    });
-
-    
+   );
 
 module.exports = model(`estudiantes`,estudiantesSchema);

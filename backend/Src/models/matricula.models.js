@@ -78,9 +78,9 @@ const matriculaSchema = new Schema({
         type: String,
         default: 0,
     },
-
-        timestamps: true
-    });
+},
+        {timestamps: true}  
+    );
 
 
 

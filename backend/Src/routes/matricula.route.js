@@ -1,7 +1,5 @@
 const { Router } = require('express')
-//const {param, check} = require('express-validator');
 const matriculaCtrl = require('../controllers/matricula.controllers');
-//const validarCampos = require('../middleware/validar');
 const route = Router();
 
 route.get('/list', matriculaCtrl.list);

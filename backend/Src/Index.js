@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
-require('./database')
+require('./database');
 
 const app = express();
 
@@ -14,7 +14,6 @@ app.use(express.json());
 
 app.use(cors({origin: "*"}));
 
-app.use("/api/test",require('./routes/test.route'))
 app.use("/api/estudiantes",require('./routes/estudiantes.route'))
 app.use("/api/acudientes", require('./routes/acudientes.route'))
 app.use("/api/profesores",require('./routes/profesores.route'))

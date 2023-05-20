@@ -1,7 +1,5 @@
 const { Router } = require("express")
-//const {param,check } = require('express-validator')
 const grupoCtrl = require("../controllers/grupo.controller");
-//const validarCampos = require('../middleware/Validar');
 const route = Router();
 
 //enlista tdos los usuarios
