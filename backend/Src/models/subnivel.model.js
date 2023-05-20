@@ -5,7 +5,7 @@ const subnivelSchema = new Schema({
         type: String,
         required: true
     },
-    Genero:{
+    genero:{
         type: String,
         required: true
     },

@@ -27,7 +27,7 @@ const matriculaModel = require('../models/matricula.models')
             });
         }
 
-        res, json({ ok: true, user });
+        res, json({ ok: true, matricula });
     } catch (error) {
         res.status(500).json({
             ok: false,

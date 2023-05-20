@@ -46,8 +46,14 @@ subnivelCtrl.add = async (req, res) => {
                 message: "El campo genero es requerido y no puede estar vacio"
             })
         }
+        const verificar = await subnivelModel.findOne({ genero })
+        if (verificar) {
+            return res.json({
+                ok: false,
+                message: "El subnivel ya esta registrado "
+            });
+        }
 
-    
         const newsubnivel = new subnivelModel({
             nivel,
             genero,
@@ -73,7 +79,7 @@ subnivelCtrl.update = async (req, res) => {
         if (!subnivel) {
             return res.status(404).json({
                 ok: false,
-                message: "Usuario no encontrado"
+                message: "subnivel no encontrado"
             });
         }
 

@@ -33,15 +33,14 @@ const mensualidadSchema = new Schema({
     
     fecha:{
         type: String,
-        required: true,
+        
     },
     descripcion:{
         type: String,
-        require: true,
+       
     },
     cantidad:{
         type: String,
-        require: true,
         unique: true,
     },
     valorunitario:{

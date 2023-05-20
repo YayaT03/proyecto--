@@ -23,7 +23,6 @@ const profesoresSchema = new Schema({
     },
     email:{
         type: String,
-        require: true,
         unique: true,
     },
     phonenumber:{
@@ -32,7 +31,7 @@ const profesoresSchema = new Schema({
     },
     direction:{
         type: String,
-        required: true
+        
     },
     edad:{
         type: String,

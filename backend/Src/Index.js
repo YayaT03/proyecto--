@@ -21,6 +21,7 @@ app.use("/api/grupo",require(`./routes/grupo.route`))
 app.use("/api/subnivel", require(`./routes/subnivel.route`))
 app.use("/api/matricula", require(`./routes/matricula.route`))
 app.use("/api/mensualidad", require(`./routes/mensualidad.route`))
+app.use("/api/registrocompetencia", require(`./routes/regristrocompetencia.route`))
 
 app.listen(app.get("Port"),() => {
     console.log("servidor corriendo por el puerto",app.get("Port"));

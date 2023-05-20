@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const registrocompetenciaCtrl = require('../controllers/acudientes.controllers');
+const registrocompetenciaCtrl = require('../controllers/registrocompetencia.controllers');
 const route = Router();
 
 route.get('/list', registrocompetenciaCtrl.list);
