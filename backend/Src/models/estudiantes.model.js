@@ -43,8 +43,11 @@ const estudiantesSchema = new Schema({
         type: String,
         
     },
+    
 },
+
       {timestamps: true}  
+
 
    );
 
