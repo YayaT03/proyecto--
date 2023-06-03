@@ -1,54 +1,54 @@
 const { Schema, model } = require("mongoose");
 
 const estudiantesSchema = new Schema({
-    documentid:{
+    documentid: {
         type: Number,
         default: 0,
         required: true
     },
-    name1:{
+    name1: {
         type: String,
         required: true
     },
-    name2:{
+    name2: {
         type: String,
         required: true
     },
-    lastname1:{
+    lastname1: {
         type: String,
         require: true,
     },
-    lastname2:{
+    lastname2: {
         type: String,
         required: true
     },
-    email:{
+    email: {
         type: String,
-        require: true,
+        require:true,
         unique: true,
     },
-    phonenumber:{
+    phonenumber: {
         type: Number,
         default: 0,
     },
-    direction:{
+    direction: {
         type: String,
-        
+
     },
-    edad:{
+    edad: {
         type: String,
-        
+
     },
-    fechadenacimiento:{
+    fechadenacimiento: {
         type: String,
-        
+
     },
-    
+
+    acudientes: [{type: Schema.Types.ObjectId, ref: "acudientes" } ],
+
 },
+    { timestamps: true }
 
-      {timestamps: true}  
+);
 
-
-   );
-
-module.exports = model(`estudiantes`,estudiantesSchema);
+module.exports = model(`estudiantes`, estudiantesSchema);

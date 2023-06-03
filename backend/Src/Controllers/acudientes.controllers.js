@@ -1,5 +1,5 @@
 const acudientesCrtl = {};
-const acudientesModel = require('../models/acudientes.model')
+const acudientesModel =require('../models/acudientes.model')
 
 
 acudientesCrtl.list = async (req, res) => {
