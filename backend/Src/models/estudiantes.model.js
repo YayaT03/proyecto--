@@ -44,7 +44,7 @@ const estudiantesSchema = new Schema({
 
     },
 
-    acudientes: [{type: Schema.Types.ObjectId, ref: "acudientes" } ],
+    acudientes: [{ type: Schema.ObjectId, ref: "acudientes" }],
 
 },
     { timestamps: true }
