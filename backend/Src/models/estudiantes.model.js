@@ -12,7 +12,7 @@ const estudiantesSchema = new Schema({
     },
     name2: {
         type: String,
-        required: true
+        
     },
     lastname1: {
         type: String,
