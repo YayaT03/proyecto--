@@ -28,6 +28,9 @@ const NavBar = () => {
               <li className="nav-item">
                 <Link to="grupos" className='nav-link active'>Grupos</Link>
               </li>
+              <li className="nav-item">
+                <Link to="Base" className='nav-link active'>Base</Link>
+              </li>
 
             {/*editar
               <li className="nav-item">
