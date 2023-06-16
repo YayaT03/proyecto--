@@ -1,46 +1,147 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react';
+import axios from "axios"
+import React, { useEffect, useState } from 'react'
+import Swal from 'sweetalert2'
 
 
-export const Base = () => {
-
+const Base = () => {
   const [estudiante, setEstudiante] = useState([]);
-  const [name1, setName1] = useState(``)
-  const [name2, setName2] = useState(``)
-  const [lastname1, setLastname1] = useState(``)
-  const [lastname2, setLastname2] = useState(``)
-  const [email, setEmail] = useState(``)
-
+  const [name1, setName1] = useState("");
+  const [name2, setName2] = useState("");
+  const [lastname1, setLastname1] = useState("");
+  const [lastname2, setLastname2] = useState("");
+  const [email, setEmail] = useState("");
+  const [edit, setEdit] = useState(false);
 
 
   useEffect(() => {
     getData();
-
   }, []);
 
+  const cleanData = () => {
+    setName1("");
+    setName2("");
+    setLastname1("");
+    setLastname2("");
+    setEmail("");
+    setEdit(false);
+  };
 
   const getData = async () => {
-    const { data } = await axios.get("http://localhost:4000/")
-    setEstudiante(data.estudiante)
+    const { data } = await axios.get("http://localhost:4000/api/estudiantes/list/");
+    setEstudiante(data.estudiante);
   };
-  
-  const saveEstudiante=async()=>{
-   try{
-    const newEstudiante={
-      name1,
-      name2,
-      lastname1,
-      lastname2,
-      email,
-    }
-    await axios.post("http://localhost:4000/",newEstudiante)
 
-   }catch (error){
-      if(!error.response.data.ok){
-         return alert(error.response.data.message);
+  const saveEstudiante = async () => {
+    try {
+      const newEstudiante = {
+        name1,
+        name2,
+        lastname1,
+        lastname2,
+        email,
+      };
+      await axios.post("http://localhost:4000/api/estudiantes/add", newEstudiante);
+      cleanData();
+      getData();
+    } catch (error) {
+      if (!error.response.data.ok) {
+        return alert(error.response.data.message);
       }
-      console.log("error en saveEstudiante",error.message);
-   }
+      console.log("error en saveEstudiate", error.message);
+    }
+  };
+
+  const updateEstudiante = async () => {
+    try {
+      const id = localStorage.getItem("id");
+      const newEstudiante = {
+        name1,
+        name2,
+        lastname1,
+        lastname2,
+        email,
+      };
+      const { data } = await axios.put("http://localhost:4000/api/estudiantes/update/" + id,newEstudiante);
+      cleanData();
+      getData();
+      Swal.fire({
+        icon: 'success',
+        title: data.message,
+        showConfirmButton: false,
+        timer: 1500
+      })
+
+    } catch (error) {
+      if (!error.response.data.ok) {
+        return alert(error.response.data.message);
+      }
+      console.log("error en updateeEstudiate", error.message);
+
+    }
+  }
+
+  const actions = (e) => {
+    e.preventDefault();
+    edit ? updateEstudiante() : saveEstudiante()
+
+  };
+
+  const completeDatafields = (item) => {
+    setEdit(true);
+    setName1(item.name1);
+    setName2(item.name2);
+    setLastname1(item.lastname1);
+    setLastname2(item.lastname2);
+    setEmail(item.email);
+    localStorage.setItem("id", item._id)
+
+  }
+
+  const deleteEstudiante = async (id) => {
+    try {
+      const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+      })
+
+      swalWithBootstrapButtons.fire({
+        title: 'estas seguro?',
+        text: "esta accion no tiene reversa",
+        icon: 'Advertencia',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          const { data } = axios.delete("http://localhost:4000/api/estudiantes/delete/" + id)
+          getData();
+          swalWithBootstrapButtons.fire({
+            icon: "success",
+            title: data.message,
+
+          });
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Cancelado',
+            'tu archivo esta a salvo',
+            'error'
+          )
+        }
+      })
+    } catch (error) {
+      if (!error.response.data.ok) {
+        return alert(error.response.data.message);
+      }
+      console.log("error en deleteEstudiate", error.message)
+    }
+
   };
 
   return (
@@ -51,7 +152,7 @@ export const Base = () => {
           <div className='card'>
             <h1 className='card-title text-center'>INGRESO </h1>
             <div className='card-body'>
-              <form>
+              <form onSubmit={actions}>
                 <div className='mb-3'>
                   <input
                     type="text"
@@ -135,26 +236,16 @@ export const Base = () => {
                 <td>{item.lastname2}</td>
                 <td>{item.email}</td>
                 <td>
-                  <i className="fa-solid fa-trash me-2"></i>
-                  <i className="fa-solid fa-edit"></i>
-                  <i className="fa-solid fa- "></i>
+                  <i className="btn btn-danger fas fa-trash me-2" onclick={() => deleteEstudiante(item._id)}></i>
+                  <i className="btn btn-warning fas fa-edit" onclick={() => completeDatafields(item)}></i>
 
                 </td>
-
-
-
-
               </tr>
             ))
           }
 
         </tbody>
-
-
-
-
       </table>
-
     </div>
   );
 };

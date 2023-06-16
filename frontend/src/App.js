@@ -13,7 +13,7 @@ import Covers from "./view/Covers";
 import Contemporaneo from "./view/Contemporaneo";
 import Urbano from "./view/Urbano";
 
-import {Base} from "./view/Base";
+import Base from './view/Base';
 
 
 function App() {
@@ -25,8 +25,8 @@ function App() {
 
         <Route path="/" element={<Inicio />} />
         <Route path="blog" element={<Blog />} />
-        <Route path="Base" element={<Base />} />
         <Route path="/grupos/*" element={<Grupos />} />
+        <Route path='base'element={<Base/>}/>
         <Route path="/grupos/contemporaneo" element={<Contemporaneo />} />
         <Route path="/grupos/covers" element={<Covers />} />
         <Route path="/grupos/urbano" element={<Urbano />} />
@@ -36,7 +36,7 @@ function App() {
 
 
 
-      <Base/>
+   
 
 
 
