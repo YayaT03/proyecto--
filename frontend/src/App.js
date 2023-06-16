@@ -1,5 +1,5 @@
 
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Route, Router, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from "./components/NavBar"
 import Inicio from "./view/Inicio"
@@ -14,6 +14,7 @@ import Contemporaneo from "./view/Contemporaneo";
 import Urbano from "./view/Urbano";
 
 import Base from './view/Base';
+import estudiante from './components/estudiante';
 
 
 function App() {
@@ -35,15 +36,10 @@ function App() {
       </Routes>
 
 
-
-   
-
-
-
-
-
-
-
+      <Router>
+        <Route path ="/" exact components={Base}/>
+        <Route path ="/estudianteid/id" components={estudiante}/>
+      </Router>
 
 
 

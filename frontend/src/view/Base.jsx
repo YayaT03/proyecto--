@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
+import {Link} from  'react-router-dom'
 
 
 const Base = () => {
@@ -11,6 +12,7 @@ const Base = () => {
   const [lastname2, setLastname2] = useState("");
   const [email, setEmail] = useState("");
   const [edit, setEdit] = useState(false);
+  
 
 
   useEffect(() => {
@@ -25,6 +27,7 @@ const Base = () => {
     setEmail("");
     setEdit(false);
   };
+
 
   const getData = async () => {
     const { data } = await axios.get("http://localhost:4000/api/estudiantes/list/");
@@ -230,7 +233,7 @@ const Base = () => {
             estudiante.map((item, i) => (
               <tr key={item._id}>
                 <td>{i + 1}</td>
-                <td>{item.name1}</td>
+                <td><Link to={"/estudianteid"+ item._id}>{item.name1}</Link></td>
                 <td>{item.Name2}</td>
                 <td>{item.lastname1}</td>
                 <td>{item.lastname2}</td>
@@ -246,6 +249,8 @@ const Base = () => {
 
         </tbody>
       </table>
+       {/*fin */}
+       
     </div>
   );
 };

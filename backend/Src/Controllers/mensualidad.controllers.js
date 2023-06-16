@@ -27,7 +27,7 @@ mensualidadCtrl.listid = async (req, res) => {
             });
         }
 
-        res, json({ ok: true, user });
+        res, json({ ok: true, mensualidad });
     } catch (error) {
         res.status(500).json({
             ok: false,

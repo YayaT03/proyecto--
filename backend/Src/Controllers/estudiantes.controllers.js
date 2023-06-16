@@ -34,7 +34,7 @@ estudiantesCrtl.listid = async (req, res) => {
                 message: "estudiante no encontrado"
             });
         }
-        res.json({ ok: true, user });
+        res.json({ ok: true, estudiantes});
     } catch (error) {
         res.status(500).json({
             ok: false,
