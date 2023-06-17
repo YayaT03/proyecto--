@@ -4,14 +4,15 @@ const estudiantesModel = require("../models/estudiantes.model")
 
 estudiantesCrtl.list = async (req, res) => {
     try {
-        //const limit=parseInt(req.params.limit) || 10;
-        //const page=parseInt(req.query.page) || 1;
-        //const options={
-        // limit,
-        // page,
+        const limit=parseInt(req.params.limit) || 10;
+        const page=parseInt(req.query.page) || 1;
+        const options={
+         limit,
+         page,
+        }
 
-        const estudiantes = await estudiantesModel.find();
-        //const users = await userModel.paginate({},options);
+        //const estudiantes = await estudiantesModel.find();
+        const estudiantes = await estudiantesModel.paginate({},options);
         res.json({
             ok: true,
             estudiantes

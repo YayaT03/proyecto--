@@ -2,6 +2,7 @@ import axios from "axios"
 import React, { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
 import {Link} from  'react-router-dom'
+import Pagination from 'rc-pagination';
 
 const Base = () => {
 
@@ -12,11 +13,14 @@ const Base = () => {
       const [lastname2, setLastname2] = useState("");
       const [email, setEmail] = useState("");
       const [edit, setEdit] = useState(false);
+
+      const[page, setPage] = useState(1);
+      const[totalPages, setTotalPages]= useState("");
       
     
       useEffect(() => {
-        getData();
-      }, []);
+        getData(page);
+      }, [page]);
     
       const cleanData = () => {
         setName1("");
@@ -28,11 +32,18 @@ const Base = () => {
       };
     
     
-      const getData = async () => {
-        const { data } = await axios.get("http://localhost:4000/api/estudiantes/list/");
-        setEstudiante(data.estudiante);
+      const getData = async (pageCurrent) => {
+        const { data } = await axios.get(`http://localhost:4000/api/estudiantes/list/?page=${pageCurrent}`);
+        setEstudiante(data.estudiante.docs);
+        setPage(data.estudiante.page);
+        setTotalPages(data.estudiante.totalPages);
       };
-    
+
+
+      const onchangePage= (page) =>{
+        getData(page);
+      };
+
       const saveEstudiante = async () => {
         try {
           const newEstudiante = {
@@ -250,6 +261,27 @@ const Base = () => {
             </tbody>
           </table>
            {/*fin */}
+
+           <div className="my-5 d-flex justify-content-center">
+            <Pagination
+            className="pagination"
+            current={page}
+            total={totalPages}
+            pageSize={1}
+            onChange={onchangePage}
+             
+             
+             
+             
+             
+             />
+          
+           </div>
+
+
+
+
+
            
         </div>
 

@@ -14,7 +14,9 @@ import Contemporaneo from "./view/Contemporaneo";
 import Urbano from "./view/Urbano";
 
 import Base from './view/Base';
-import Estudiante from './view/estudiante';
+import Estudiant from './view/Estudiant';
+
+
 
 
 function App() {
@@ -34,7 +36,7 @@ function App() {
         <Route path="/grupos/registro" element={<Registro />} />
 
         <Route path="/" exact component ={Base}/>
-        <Route path='estudianteid/:id' component={Estudiante}/>
+        <Route path='estudianteid/:id' component={Estudiant}/>
       </Routes>
 
 

@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const mongoosePaginate = require('mongoose-paginate-v2')
 
 const estudiantesSchema = new Schema({
     documentid: {
@@ -50,5 +51,7 @@ const estudiantesSchema = new Schema({
     { timestamps: true }
 
 );
+
+estudiantesSchema.plugin(mongoosePaginate);
 
 module.exports = model(`estudiantes`, estudiantesSchema);
