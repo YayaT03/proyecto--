@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Route, Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from "./components/NavBar"
 import Inicio from "./view/Inicio"
@@ -14,7 +14,7 @@ import Contemporaneo from "./view/Contemporaneo";
 import Urbano from "./view/Urbano";
 
 import Base from './view/Base';
-import estudiante from './components/estudiante';
+import Estudiante from './view/estudiante';
 
 
 function App() {
@@ -32,17 +32,13 @@ function App() {
         <Route path="/grupos/covers" element={<Covers />} />
         <Route path="/grupos/urbano" element={<Urbano />} />
         <Route path="/grupos/registro" element={<Registro />} />
-        
+
+        <Route path="/" exact component ={Base}/>
+        <Route path='estudianteid/:id' component={Estudiante}/>
       </Routes>
 
 
-      <Router>
-        <Route path ="/" exact components={Base}/>
-        <Route path ="/estudianteid/id" components={estudiante}/>
-      </Router>
-
-
-
+     
     </div>
   );
 }
