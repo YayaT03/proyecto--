@@ -33,7 +33,7 @@ const Base = () => {
     
     
       const getData = async (pageCurrent) => {
-        const { data } = await axios.get(`http://localhost:4000/api/estudiantes/list/?page=${pageCurrent}`);
+        const { data } = await axios.get(`/api/estudiantes/list/?page=${pageCurrent}`);
         setEstudiante(data.estudiante.docs);
         setPage(data.estudiante.page);
         setTotalPages(data.estudiante.totalPages);
@@ -53,7 +53,7 @@ const Base = () => {
             lastname2,
             email,
           };
-          await axios.post("http://localhost:4000/api/estudiantes/add", newEstudiante);
+          await axios.post("/api/estudiantes/add", newEstudiante);
           cleanData();
           getData();
         } catch (error) {
@@ -74,7 +74,7 @@ const Base = () => {
             lastname2,
             email,
           };
-          const { data } = await axios.put("http://localhost:4000/api/estudiantes/update/" + id,newEstudiante);
+          const { data } = await axios.put("/api/estudiantes/update/" + id,newEstudiante);
           cleanData();
           getData();
           Swal.fire({
@@ -130,7 +130,7 @@ const Base = () => {
             reverseButtons: true
           }).then(async (result) => {
             if (result.isConfirmed) {
-              const { data } = axios.delete("http://localhost:4000/api/estudiantes/delete/" + id)
+              const { data } = axios.delete("/api/estudiantes/delete/" + id)
               getData();
               swalWithBootstrapButtons.fire({
                 icon: "success",
