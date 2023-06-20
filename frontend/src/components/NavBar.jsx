@@ -29,7 +29,7 @@ const NavBar = () => {
                 <Link to="grupos" className='nav-link active'>Grupos</Link>
               </li>
               <li className="nav-item">
-                <Link to="base" className='nav-link active'>Base</Link>
+                <Link to="Estudiantes" className='nav-link active'>Base</Link>
               </li>
 
             {/*editar

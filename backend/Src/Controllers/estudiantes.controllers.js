@@ -12,7 +12,7 @@ estudiantesCrtl.list = async (req, res) => {
         }
 
         //const estudiantes = await estudiantesModel.find();
-        const estudiantes = await estudiantesModeln.paginate({},options);
+        const estudiantes = await estudiantesModel.paginate({},options);
         res.json({
             ok: true,
             estudiantes
