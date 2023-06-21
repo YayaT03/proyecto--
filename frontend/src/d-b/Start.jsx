@@ -16,7 +16,7 @@ const Inicio = () => {
       <br></br>
       <ul className="nav justify-content-center">
         <li className="nav-item - bg-white">
-          <Link to="" className="nav-link active" >Estudiantes</Link>
+          <Link to="Estudiantes" className="nav-link active" >Estudiantes</Link>
         </li>
         <li className="nav-item bg-white">
           <Link to="" className="nav-link">Acudientes</Link>
