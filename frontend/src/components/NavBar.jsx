@@ -31,6 +31,9 @@ const NavBar = () => {
               <li className="nav-item">
                 <Link to="Estudiantes" className='nav-link active'>Base</Link>
               </li>
+              <li className="nav-item">
+                <Link to="Start" className='nav-link active'>Ingreso</Link>
+              </li>
 
             {/*editar
               <li className="nav-item">

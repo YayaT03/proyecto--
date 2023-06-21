@@ -15,6 +15,7 @@ import Urbano from "./view/Urbano";
 
 import Estudiantes from './view/Estudiantes';
 import Estudiant from './view/Estudiant';
+import Start from "./d-b/Start"
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Inicio />} />
         <Route path="blog" element={<Blog />} />
         <Route path="/grupos/*" element={<Grupos />} />
+        <Route path="start" element={<Start />} />
         <Route path='estudiantes'element={<Estudiantes/>}/>
         <Route path="/grupos/contemporaneo" element={<Contemporaneo />} />
         <Route path="/grupos/covers" element={<Covers />} />

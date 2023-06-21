@@ -41,9 +41,9 @@ const Estudiantes = () => {
     
         const getData = async (pageCurrent) => {
             const { data } = await axios.get(`/estudiantes/list?page=${pageCurrent}`);
-            setEstudiante(data.estudiante.docs);
-            setPage(data.estudiante.page);
-            setTotalPages(data.estudiante.totalPages);
+            setEstudiante(data.estudiante.docs)
+            setPage(data.estudiante.page)
+            setTotalPages(data.estudiante.totalPages)
             
         };
     
