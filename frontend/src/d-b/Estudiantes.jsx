@@ -15,11 +15,17 @@ const Estudiantes = () => {
         const [edit, setEdit] = useState(false);
        
         const [dataForm, setDataForm] = useState({
+            documentid:"",
             name1: "",
             name2: "",
             lastname1: "",
             lastname2: "",
             email: "",
+            phonenumber:"",
+            direction:"",
+            edad:"",
+            fechadenacimiento:""
+
             
         });
     
@@ -35,7 +41,7 @@ const Estudiantes = () => {
             // setLastname('');
             // setEmail('');
             // setSalary(0);
-            setDataForm({name1:"", name2: "",lastname1: "", lastname2:"", email:""});
+            setDataForm({documentid:"",name1:"", name2: "",lastname1: "", lastname2:"", email:"",phonenumber:"",direction:"",edad:"",fechadenacimiento:""});
             setEdit(false);
         };
     
@@ -119,7 +125,8 @@ const Estudiantes = () => {
             // setEmail(item.email);
     
             setDataForm({
-                name1: item.name1,name2: item.name2, lastname1: item.lastname1, lastname2: item.lastname2, email: item.email,
+                documentid: item.documentid,name1: item.name1,name2: item.name2, lastname1: item.lastname1, lastname2: item.lastname2, email: item.email,
+                phonenumber: item.phonenumber,direction: item.direction, edad: item.edad, fechadenacimiento: item.fechadenacimiento,
             });
             localStorage.setItem('id', item._id);
     
@@ -172,6 +179,9 @@ const Estudiantes = () => {
                             <h1 className="card-title text-center">REGISTRO</h1>
                             <div className="card-body">
                                 <form onSubmit={actions}>
+                                <div className="mb-3">
+                                        <input type="number" placeholder="documentid" className="form-control" required value={dataForm.documentid} onChange={(e) => setDataForm({ ...dataForm, documentid: e.target.value })} />
+                                    </div>
                                     <div className="mb-3">
                                         <input type="text" placeholder="Name1" className="form-control" required value={dataForm.name1} onChange={(e) => setDataForm({ ...dataForm, name1: e.target.value })} />
                                     </div>
@@ -187,7 +197,15 @@ const Estudiantes = () => {
                                     <div className="mb-3">
                                         <input type="email" placeholder="Email" className="form-control" required value={dataForm.email} onChange={(e) => setDataForm({ ...dataForm, email: e.target.value })} />
                                     </div>
-                                    
+                                    <div className="mb-3">
+                                        <input type="number" placeholder="phonenumber" className="form-control" required value={dataForm.phonenumber} onChange={(e) => setDataForm({ ...dataForm, phonenumber: e.target.value })} />
+                                    </div>
+                                    <div className="mb-3">
+                                        <input type="number" placeholder="edad" className="form-control" required value={dataForm.edad} onChange={(e) => setDataForm({ ...dataForm, edad: e.target.value })} />
+                                    </div>
+                                    <div className="mb-3">
+                                        <input type="text" placeholder="fechadenacimiento" className="form-control" required value={dataForm.fechadenacimiento} onChange={(e) => setDataForm({ ...dataForm, fechadenacimiento: e.target.value })} />
+                                    </div>
                                     <button className="btn btn-primary form-control" type="submit">Enviar</button>
                                 </form>
                             </div>
