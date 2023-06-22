@@ -16,7 +16,7 @@ import Urbano from "./view/Urbano";
 import Estudiantes from './d-b/Estudiantes';
 import Estudiant from './d-b/Estudiant';
 import Start from "./d-b/Start"
-
+import Acudientes from './d-b/Acudientes';
 
 
 
@@ -32,6 +32,7 @@ function App() {
         <Route path="/grupos/*" element={<Grupos />} />
         <Route path="start" element={<Start />} />
         <Route path="/start/estudiantes" element={<Estudiantes />} />
+        <Route path="/start/acudientes" element={<Acudientes />} />
         <Route path="/grupos/contemporaneo" element={<Contemporaneo />} />
         <Route path="/grupos/covers" element={<Covers />} />
         <Route path="/grupos/urbano" element={<Urbano />} />
@@ -39,6 +40,7 @@ function App() {
 
         <Route path="/" exact component ={Estudiantes}/>
         <Route path='estudianteid/:id' component={Estudiant}/>
+        <Route path='acudientes/:id' component={Acudientes}></Route>
       </Routes>
 
 

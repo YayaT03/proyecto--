@@ -19,7 +19,7 @@ const Inicio = () => {
           <Link to="Estudiantes" className="nav-link active" >Estudiantes</Link>
         </li>
         <li className="nav-item bg-white">
-          <Link to="" className="nav-link">Acudientes</Link>
+          <Link to="Acudientes" className="nav-link active">Acudientes</Link>
         </li>
         <li className="nav-item bg-white">
           <Link to="" className="nav-link" >Profesores</Link>
