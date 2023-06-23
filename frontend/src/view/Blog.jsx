@@ -12,7 +12,7 @@ const Blog = () => {
   return (
     <div>
       <em>
-        <h1 className="display-4"> Blog </h1>
+        <h1 className="display-4"> Blog</h1>
       </em>
       <br></br>
       <div>
